@@ -5,7 +5,7 @@ const app=express()
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  return res.status(200).send("<h1>Server up and running bc</h1>");
+  return res.status(200).json(`Server is live and ${process.env.Key} is available`);
 });
 
 
